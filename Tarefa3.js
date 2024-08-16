@@ -5,9 +5,9 @@ function countOccurrences(fruits){
     for (const fruta of listaFruitsUnicos) {
         objFrutas[fruta] = 0
         for (const fruit of fruits){
-            console.log(Object.keys(objFrutas) == fruit); //Aqui eu queria verificar o que me retornava  true e false, mas so retorna 3 true
-            if(Object.keys(objFrutas) == fruits){
-                objFrutas[fruta]= objFrutas[fruta]+1;
+            
+            if(fruta == fruit){
+                objFrutas[fruta]= objFrutas[fruta] +1;
             }
         }
        
@@ -15,5 +15,4 @@ function countOccurrences(fruits){
     }
     return objFrutas;
 }
-
-//não estou sabendo somar ou o for está zerando
+//Achei o erro
