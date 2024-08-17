@@ -8,5 +8,5 @@ function groupByCategory(items) {
         objCategoria[item.category].push(item);
     }
 
-    console.log(objCategoria);
+    return objCategoria;
 }
