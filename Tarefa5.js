@@ -9,20 +9,30 @@ const array1 = [
   ];
   const arrayconcat=[];
   const todosArray = array1.concat(array2);
-  arrayconcat.push(todosArray[0]);
-  
-  for (const arr1 of arrayconcat){
-      for (const arr2 of todosArray){
-          if(arr1.id == arr2.id ){
-              const unir = Object.assign(arr1,arr2);
-              arrayconcat.push(unir);
-              
-          }else{
-              arrayconcat.push(arr2);
-              console.log(arrayconcat);
-      }
-      }
-  }
 
   
-  //Algum erro no laço de repetição
+  
+  for (const arr1 of todosArray){
+      if(todosArray[todosArray.indexOf(arr1 + 1)]== undefined){
+          arrayconcat.push(arr1);
+      }
+
+ for (let arr2 of arrayconcat) {
+      for (let arr3 of todosArray) {
+          if(arr2.id == arr3.id){
+             const unir = Object.assign(arr2,arr3);
+              
+              console.log(arrayconcat.indexOf(arr3));
+          }
+         
+     }
+ }         
+         
+        
+  }
+      
+  
+console.log(arrayconcat);
+
+  
+  //So falta conseguir apagar apenas o certo
